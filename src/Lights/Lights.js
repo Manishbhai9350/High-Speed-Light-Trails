@@ -84,7 +84,7 @@ export class Lights {
       let radius = Math.random() * Math.random() * 0.1 + 0.1;
       // Give it some randomness but keep it over length *0.02
       let length =
-        Math.random() * this.options.length * 0.08 + this.options.length * 0.02;
+        Math.random() * this.options.length * 0.2 + this.options.length * 0.02;
 
       aMetrics.push(radius);
       aMetrics.push(length);

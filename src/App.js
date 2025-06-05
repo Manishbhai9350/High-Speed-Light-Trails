@@ -82,7 +82,6 @@ export class App extends BasicThreeDemo {
 
     let Time = this.clock.getElapsedTime() + this.timeOffset;
     Time *= 2;
-    console.log(Time);
 
     this.LeftLights.update(Time);
     this.RightLights.update(-Time);

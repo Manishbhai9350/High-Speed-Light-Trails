@@ -3,9 +3,11 @@ attribute vec2 aMetrics;
 uniform float uTime;
 uniform float uTimeSpeed;
 uniform float uRoadLen;
-varying float prog;
 uniform vec2 uDistortionY;
 uniform vec2 uDistortionX;
+
+varying float prog;
+varying float yUv;
 
 #define PI 3.14159265358979
 
@@ -27,6 +29,7 @@ vec2 Distort(float progress){
 
 void main(){
     vec3 transformed = position.xyz;
+   
 
     float radius = aMetrics.r;
     float len = aMetrics.g;
@@ -45,6 +48,7 @@ void main(){
     vec2 Distortion = Distort(progress);
 
     transformed.xy += Distortion;
+    yUv = mod((transformed.z / len),1.0);
     
     gl_Position = projectionMatrix * modelViewMatrix * vec4(transformed.xyz, 1.);
 }
