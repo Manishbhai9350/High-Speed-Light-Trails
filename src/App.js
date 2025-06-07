@@ -132,7 +132,7 @@ export class App extends BasicThreeDemo {
   update(delta) {
     this.camera.zProg += delta * .1;
     this.camera.zProg %= 1;
-    this.MoveCamera(this.camera);
+    // this.MoveCamera(this.camera);
     let coefficient = -60 * Math.log2(1 - 0.1);
     let lerpT = Math.exp(-coefficient * delta);
     this.speedUp += Lerp(this.speedUp, this.targetSpeedUp, lerpT, 0.00001);
