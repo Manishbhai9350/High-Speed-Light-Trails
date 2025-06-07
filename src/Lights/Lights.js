@@ -56,7 +56,7 @@ export class Lights {
 
       const sectionX =
         section * sectionWidth - this.options.roadWidth / 2 + sectionWidth / 2;
-      const sectionY = Radius * 1.2;
+      const sectionY = Radius * 1.2 + Math.random() * .3;
       const sectionZ = Math.random() * this.options.length;
       // const sectionZ = i / InstacedCount * this.options.length * 2
 
