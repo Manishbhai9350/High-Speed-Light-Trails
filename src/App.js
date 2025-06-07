@@ -181,8 +181,8 @@ export class App extends BasicThreeDemo {
     camera.position.y = 10 +  y
     camera.position.z = -7 - this.options.length * Prog
 
-    // let LookAtProg = Prog + .3
-    // LookAtProg = Math.max(Prog,1)
+    // let LookAtProg = Prog + .1
+    // LookAtProg = Math.max(LookAtProg,1)
     // const LookAt = this.Distort(LookAtProg,XFreq,YFreq,XAmp,YAmp)
     // this.lookAt.set(LookAt[0],LookAt[1],-7 - this.options.length * LookAtProg)
     // camera.lookAt(this.lookAt)
